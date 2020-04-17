@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>903</width>
+    <height>478</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0" colspan="2">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QLabel" name="label_yourSelection">
+        <property name="text">
+         <string>Your Selections</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QLabel" name="label_BAT">
+          <property name="text">
+           <string>Batsmen(BAT)</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_BAT"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_BOW">
+          <property name="text">
+           <string>Bowlers(BOW)</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_BOW"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_AR">
+          <property name="text">
+           <string>All Rounders(AR)</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_AR">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="font">
+           <font>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_WR">
+          <property name="text">
+           <string>Wicket-Keeper(WK)</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_WK"/>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <item>
+         <widget class="QLabel" name="label_ptAvailable">
+          <property name="text">
+           <string>Point Available</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_ptAvailable"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <item>
+         <widget class="QRadioButton" name="radioButton_BAT">
+          <property name="text">
+           <string>BAT</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="radioButton_BOW">
+          <property name="text">
+           <string>BOW</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="radioButton_AR">
+          <property name="text">
+           <string>AR</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="radioButton_WK">
+          <property name="text">
+           <string>WK</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QListWidget" name="listWidget_availablePlayer"/>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="1">
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_6">
+        <item>
+         <widget class="QLabel" name="label_ptUsed">
+          <property name="text">
+           <string>Point used</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_ptUsed"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_7">
+        <item>
+         <widget class="QLabel" name="label_TeamName">
+          <property name="text">
+           <string>Team Name</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_TeamName"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QListWidget" name="listWidget_selectedPlayer"/>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>903</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuManage_Team">
+    <property name="title">
+     <string>Manage Team</string>
+    </property>
+    <addaction name="actionNew_Team"/>
+    <addaction name="actionOPEN_Team"/>
+    <addaction name="actionSAVE_Team"/>
+    <addaction name="actionEVALUATE_Team"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <addaction name="menuManage_Team"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionNew_Team">
+   <property name="text">
+    <string>NEW Team</string>
+   </property>
+  </action>
+  <action name="actionOPEN_Team">
+   <property name="text">
+    <string>OPEN Team</string>
+   </property>
+  </action>
+  <action name="actionSAVE_Team">
+   <property name="text">
+    <string>SAVE Team</string>
+   </property>
+  </action>
+  <action name="actionEVALUATE_Team">
+   <property name="text">
+    <string>EVALUATE Team</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
