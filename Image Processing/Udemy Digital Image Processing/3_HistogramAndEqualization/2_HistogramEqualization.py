@@ -2,7 +2,7 @@ import numpy as np
 import scipy.misc, math
 from PIL import Image
 
-img = Image.open('images/lena512.bmp')
+img = Image.open('../images/lena512.bmp')
 
 img1 = scipy.misc.fromimage(img)
 fl = img1.flatten()

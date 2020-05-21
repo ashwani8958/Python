@@ -1,7 +1,7 @@
 from PIL import Image
 from pylab import *
 
-img = Image.open('images/profile.jpg').convert('L')
+img = Image.open('../images/profile.jpg').convert('L')
 img_array = array(img)
 #img.show()
 
