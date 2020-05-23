@@ -1,11 +1,15 @@
 import os,sys
 from PIL import Image
 
+# https://pillow.readthedocs.io/en/latest/handbook/tutorial.html#using-the-image-class
+
 # List of the images
 images = []
 thumbnailSize = (128,128)
 
-os.chdir("../images")
+os.chdir("./images")
+
+# Make lists contains all the file name in the current working folder
 for root, dirs, files in os.walk("."):
    for name in files:
        images.append(name)
