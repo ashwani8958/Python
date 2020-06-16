@@ -6,6 +6,7 @@ MySchool = sqlite3.connect('schooltest.db')
 
 curschool = MySchool.cursor()
 
+# Check weather table with name Student Exits or not
 curschool.execute('''SELECT name FROM sqlite_master WHERE type='table' AND name='{Student}';''')
 
 curschool.execute('''INSERT INTO Student(StudentID, Name, Age, Marks) VALUES

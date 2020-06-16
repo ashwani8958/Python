@@ -18,7 +18,7 @@ my_marks = float(input("Enter the Student marks: - "))
 #curschool.execute(''' INSERT INTO Student(StudentID, Name, Age, Marks)
  #VALUES (my_id, my_name, my_age, my_marks);''')
 
-curschool.execute("INSERT INTO Student (StudentID, Name, Age, Marks) VALUES (?,?,?,?);", (my_id,my_name,my_age,my_marks))
+curschool.execute("INSERT INTO Student (StudentID, Name, Age, Marks) VALUES (?,?,?,?);", (my_id, my_name, my_age, my_marks))
 
 #commit te changes
 MySchool.commit()

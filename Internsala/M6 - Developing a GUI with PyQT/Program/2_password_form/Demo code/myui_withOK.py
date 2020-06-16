@@ -8,13 +8,14 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
+
 class Ui_MainWindow(object):
     def chkPassword(self):
-        txt=self.lineEdit.text()
-        if txt=='Internshala':
-            print ('Valid password')
+        txt = self.lineEdit.text()
+        if txt == 'Internshala':
+            print('Valid password')
         else:
-            print ('Invalid password')
+            print('Invalid password')
 
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -91,6 +92,7 @@ class Ui_MainWindow(object):
 
 if __name__ == "__main__":
     import sys
+
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
     ui = Ui_MainWindow()
