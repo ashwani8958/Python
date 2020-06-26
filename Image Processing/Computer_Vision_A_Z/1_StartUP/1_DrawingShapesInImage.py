@@ -12,7 +12,7 @@ cv2.rectangle(img=BlankImg, pt1=(200, 200), pt2=(300, 300), color=(255, 0, 0), t
 
 # Circle in image
 cv2.circle(img=BlankImg, center=(100, 100), radius=50, color=(0, 0, 255), thickness=5)
-cv2.circle(img=BlankImg, center=(400, 400), radius=50, color=(0, 0, 255), thickness=-1) # solid circle
+cv2.circle(img=BlankImg, center=(400, 400), radius=50, color=(0, 0, 255), thickness=-1)  # solid circle
 
 # Line in image
 cv2.line(img=BlankImg, pt1=(0, 0), pt2=(511, 511), color=(102, 255, 255), thickness=5)
@@ -29,9 +29,15 @@ vertices = np.array([[100, 300], [200, 200], [400, 300], [200, 400]], np.int32)
 pts = vertices.reshape((-1, 1, 2))
 cv2.polylines(BlankImg2, [pts], isClosed=True, color=(255, 0, 0), thickness=5)
 
+plt.figure(figsize=(5, 5))
 
 # Show image
+plt.subplot(1, 2, 1)
 plt.imshow(BlankImg)
-plt.waitforbuttonpress()
+plt.title("Blank Image 1")
+
+plt.subplot(1, 2, 2)
 plt.imshow(BlankImg2)
-plt.waitforbuttonpress()
+plt.title("Blank Image 1")
+
+plt.show()
