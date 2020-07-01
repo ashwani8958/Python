@@ -26,7 +26,7 @@ cv2.putText(img=BlankImg, text='Hello', org=(10, 500), fontFace=font, fontScale=
 # Create a blank image
 BlankImg2 = np.zeros(shape=(512, 512, 3), dtype=np.int16)
 vertices = np.array([[100, 300], [200, 200], [400, 300], [200, 400]], np.int32)
-pts = vertices.reshape((-1, 1, 2))
+pts = vertices.reshape((-1, 1, 2))  # Convert into three Dimensions
 cv2.polylines(BlankImg2, [pts], isClosed=True, color=(255, 0, 0), thickness=5)
 
 plt.figure(figsize=(5, 5))
@@ -34,10 +34,10 @@ plt.figure(figsize=(5, 5))
 # Show image
 plt.subplot(1, 2, 1)
 plt.imshow(BlankImg)
-plt.title("Blank Image 1")
+plt.title('Blank Image 1')
 
 plt.subplot(1, 2, 2)
 plt.imshow(BlankImg2)
-plt.title("Blank Image 1")
+plt.title('Blank Image 2')
 
 plt.show()
